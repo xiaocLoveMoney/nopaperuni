@@ -1,0 +1,122 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uview-ui/components/u-$1/u-$1.vue"
+	},
+	// "condition": { //模式配置，仅开发期间生效
+	// 	"current": 0, //当前激活的模式(list 的索引项)
+	// 	"list": [{
+	// 		"name": "test", //模式名称
+	// 		"path": "pages/componentsC/test/index", //启动页面，必选
+	// 		"query": "uuid=c4bba940-f69e-11ea-a419-6bafda9d095e&__id__=1" //启动参数，在页面的onLoad函数里面得到
+	// 	}]
+	// },
+	"pages": [{
+		"path" : "pages/mypages/home/login",
+		"style" : 
+		{
+			"navigationStyle": "custom" 
+		}
+	},
+	{
+		"path" : "pages/mypages/home/index",
+			"style": {
+				"navigationBarTitleText": "无纸化请假系统",
+				"enablePullDownRefresh": true,
+				"navigationBarBackgroundColor": "#64ace6",
+				"navigationBarTextStyle": "white",
+				"backgroundColor": "#EAEDF1"
+			}
+	},
+	{
+		"path" : "pages/mypages/my/index",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"enablePullDownRefresh": true,
+				"navigationBarBackgroundColor": "#64ace6",
+				"navigationBarTextStyle": "white",
+				"backgroundColor": "#EAEDF1"
+			}
+	},
+	{
+		"path" : "pages/mypages/attendance/index",
+			"style": {
+				"navigationBarTitleText": "每日签到情况",
+				"enablePullDownRefresh": true,
+				"navigationBarBackgroundColor": "#64ace6",
+				"navigationBarTextStyle": "white",
+				"backgroundColor": "#EAEDF1"
+			}
+	},
+	{
+		"path" : "pages/mypages/home/createLeaves",
+		"style" : 
+		{
+			"navigationBarTitleText" : "提交请假申请"
+		}
+	},
+	{
+		"path" : "pages/mypages/home/uploadAttendance",
+		"style" : 
+		{
+			"navigationBarTitleText" : "上传学生考勤"
+		}
+	},
+	{
+		"path" : "pages/mypages/home/checkLeaves",
+		"style" : 
+		{
+			"navigationBarTitleText" : "请假申请审批"
+		}
+	},
+	{
+		"path" : "pages/mypages/my/settings",
+		"style" : 
+		{
+			"navigationBarTitleText" : "个人设置"
+		}
+	},
+	{
+		"path" : "pages/mypages/my/resetpwd",
+		"style" : 
+		{
+			"navigationBarTitleText" : "修改密码"
+		}
+	}],
+	"preloadRule": {
+		"pages/example/components": {
+			"network": "all",
+			"packages": ["pages/componentsA", "pages/componentsB", "pages/componentsC"]
+		}
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uView",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#FFFFFF"
+	},
+	"tabBar": {
+		"color": "#333",
+		"selectedColor": "#64ace6",
+		"borderStyle": "black",
+		"backgroundColor": "#fff",
+		"list": [{
+				"pagePath": "pages/mypages/home/index",
+				"iconPath": "static/tabbar/home.png",
+				"selectedIconPath": "static/tabbar/home-active.png",
+				"text": "主页"
+			},
+			{
+				"pagePath": "pages/mypages/attendance/index",
+				"iconPath": "static/tabbar/attendance.png",
+				"selectedIconPath": "static/tabbar/attendance-active.png",
+				"text": "考勤"
+			},
+			{
+				"pagePath": "pages/mypages/my/index",
+				"iconPath": "static/tabbar/my.png",
+				"selectedIconPath": "static/tabbar/my-active.png",
+				"text": "我的"
+			}
+		]
+	}
+}
