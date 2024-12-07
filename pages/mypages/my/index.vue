@@ -14,7 +14,7 @@
 			</view>
 		</view>
 
-		<u-card style="margin: 5%;" :title="'个人信息'">
+		<u-card  :title="'个人信息'">
 			<view slot="body">
 				<u-row>
 					<u-col span="6" class="info-vertical">
@@ -31,7 +31,7 @@
 				</u-row>
 			</view>
 		</u-card>
-		<u-card style="margin: 5%;" :title="'绑定信息'">
+		<u-card  :title="'绑定信息'">
 			<view slot="body">
 				<u-row>
 					<u-col span="6" class="info-vertical">
@@ -58,7 +58,7 @@
 				</u-row>
 			</view>
 		</u-card>
-		<view style="margin: 5%;">
+		<view style="margin-left: 5%; margin-right: 5%;">
 			<u-cell-group>
 				<u-cell-item icon="setting-fill" title="个人设置" @click="switch_btn('/pages/mypages/my/settings')"></u-cell-item>
 				<u-cell-item icon="reload" title="修改密码" @click="switch_btn('/pages/mypages/my/resetpwd')"></u-cell-item>
@@ -117,13 +117,6 @@
 		height: 40px;
 	}
 
-	.icon {
-		transition: 0.3s all;
-
-		&:active {
-			transform: scale(0.7);
-		}
-	}
 
 	@keyframes breathe {
 		0% {

@@ -42,22 +42,25 @@
 						key: "token",
 						data: res.token
 					})
-					uni.showToast({
-						title: '登录成功',
-					});
+					// localStorage.setItem("token", res.token)
 					this.$u.get("/api/auth/info").then(res => {
 						console.log(res);
 						uni.setStorage({
 							key: "info",
 							data: JSON.stringify(res.data)
 						})
+
+						uni.showToast({
+							title: '登录成功',
+						});
 						setTimeout(function() {
-						uni.switchTab({
+							uni.switchTab({
 								url: '/pages/mypages/home/index'
 							})
-						}, 500);
+						}, 1500);
 					})
 				}).catch(err => {
+					console.log(err);
 					uni.showToast({
 						title: '用户名或密码错误',
 						icon: 'error'
